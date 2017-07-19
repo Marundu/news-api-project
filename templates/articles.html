@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Simple Flask NewsApi.org App</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="../static/css/milligram/milligram.min.css">
+  <link rel="stylesheet" href="../static/css/override.css">
+  
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+</head>
+
+<body>
+  <div id="header">
+    <div id="inner-header">
+      <h2>Simple Flask NewsApi.org App</h2>
+    </div>
+    <hr />
+  </div>
+  
+  <div id="main">
+
+    <h3> News of the Day </h3>
+    <h4><i> Source: {{source}} </i><br/></h4>
+    <p><i> {{title}} </i></p>
+    <p><i> Description: </i> {{description}} </p>
+    <p><i> URL: </i> <a href="{{url}}">{{url}}</a> </p>
+    <hr/>
+
+  </div> 
+  </body>
+</html>
