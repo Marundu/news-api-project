@@ -22,12 +22,18 @@
   
   <div id="main">
 
-    <h3> News of the Day </h3>
-    <h4><i> Source: {{source}} </i><br/></h4>
-    <p><i> {{title}} </i></p>
-    <p><i> Description: </i> {{description}} </p>
-    <p><i> URL: </i> <a href="{{url}}">{{url}}</a> </p>
-    <hr/>
+    <h4><i> Source: {{ source }} </i><br/></h4>
+
+    {% for article in articles %}
+    <u><p>{{ article['title'] }}</p></u>
+
+    <p><i> Description: </i> {{ article['description'] }}</p>
+
+    <p>URL: <a href="{{ article['url'] }}" target="_blank">{{ article['url'] }}</a></p>
+
+    <p>{{ article['publishedAt'] }}</p>
+
+    {% endfor %}
 
   </div>
   
