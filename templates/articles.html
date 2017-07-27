@@ -1,43 +1,67 @@
 <html>
-<head>
-  <title>Simple Flask NewsApi.org App</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" href="../static/css/milligram/milligram.min.css">
-  <link rel="stylesheet" href="../static/css/override.css">
-  
-  <!-- Google Fonts -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-</head>
+  <head>
+    <title>Simple Flask NewsApi.org App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Milligram Manenos -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <link rel="stylesheet" href="../static/css/override.css">
 
-<body>
-  <div id="header">
-    <div id="inner-header">
-      <h2>Simple Flask NewsApi.org App</h2>
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="inner-header">
+        <h2>Simple Flask NewsApi.org App</h2>
+      </div>
+      <hr />
     </div>
-    <hr />
-  </div>
-  
-  <div id="main">
+    
+    <div id="main">
+      <div id="form">
+        <select>
+          <option>al-jazeera-english</option> 
+          <option>ars-technica</option>
+          <option>business-insider</option>
+          <option>buzzfeed</option>
+          <option>engadget</option>
+          <option>financial-times</option>
+          <option>hacker-news</option>
+          <option>mashable</option>
+          <option>national-geographic </option>
+          <option>polygon</option>
+          <option>recode</option>
+          <option>reuters</option>
+          <option>techcrunch</option>
+          <option>techradar</option>
+          <option>the-economist</option>
+          <option>the-guardian-uk</option></option>
+          <option>the-next-web</option>
+          <option>the-new-york-times</option>
+          <option>the-verge</option>
+        </select>
+      </div>
 
-    <h4><i> Source: {{ source }} </i><br/></h4>
+      <h4><i> Source: {{ source }} </i><br/></h4>
 
-    {% for article in articles %}
-    <u><p>{{ article['title'] }}</p></u>
+      {% for article in articles %}
+      <u><p>{{ article['title'] }}</p></u>
 
-    <p><i> Description: </i> {{ article['description'] }}</p>
+      <p><i> Description: </i> {{ article['description'] }}</p>
 
-    <p>URL: <a href="{{ article['url'] }}" target="_blank">{{ article['url'] }}</a></p>
+      <p>URL: <a href="{{ article['url'] }}" target="_blank">{{ article['url'] }}</a></p>
 
-    <p>{{ article['publishedAt'] }}</p>
+      <p>{{ article['publishedAt'] }}</p>
 
-    {% endfor %}
+      {% endfor %}
 
-  </div>
-  
-  <footer>Made with love in Flask and <a href="https://newsapi.org/">NewsAPI API</a></footer>
-  
-</body>
+    </div>
+    
+    <footer>Made with love in Flask and <a href="https://newsapi.org/">NewsAPI API</a></footer>
+    
+  </body>
 </html>
