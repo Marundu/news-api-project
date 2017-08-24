@@ -45,8 +45,8 @@ def articles():
     try:
         source=parsed['source']
         articles=parsed['articles']
-        
         return render_template('articles.html', source=source, articles=articles)
+
     except KeyError:
         return render_template('error.html')
 
