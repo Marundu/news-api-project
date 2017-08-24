@@ -14,7 +14,8 @@ sources_list=[
     'al-jazeera-english', 
     'ars-technica', 
     'business-insider', 
-    'buzzfeed', 'engadget', 
+    'buzzfeed', 
+    'engadget', 
     'financial-times', 
     'hacker-news', 
     'mashable', 
@@ -41,9 +42,13 @@ base_url='https://newsapi.org/v1/articles?source={}&sortBy=latest&apiKey='.forma
 def articles():
     articles=requests.get(base_url+api_key)
     parsed=articles.json()
-    source=parsed['source']
-    
-    return render_template('articles.html', source=source, articles=parsed['articles'])
+    try:
+        source=parsed['source']
+        articles=parsed['articles']
+        
+        return render_template('articles.html', source=source, articles=articles)
+    except KeyError:
+        return render_template('error.html')
 
 if __name__=='__main__':
     app.run(port=7100, debug=True)
