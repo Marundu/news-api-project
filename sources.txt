@@ -1,19 +1,20 @@
-al-jazeera-english
-ars-technica
-business-insider
-buzzfeed
-engadget
-financial-times
-hacker-news
-mashable
-national-geographic
-polygon
-recode
-reuters
-techcrunch
-techradar
-the-economist
-the-guardian-uk
-the-next-web
-the-new-york-times
-the-verge
+sources_list=[
+    'al-jazeera-english', 
+    'ars-technica', 
+    'business-insider', 
+    'buzzfeed', 'engadget', 
+    'financial-times', 
+    'hacker-news', 
+    'mashable', 
+    'national-geographic', 
+    'polygon', 
+    'recode', 
+    'reuters', 
+    'techcrunch', 
+    'techradar', 
+    'the-economist', 
+    'the-guardian-uk', 
+    'the-next-web', 
+    'the-new-york-times', 
+    'the-verge'
+    ]

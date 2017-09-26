@@ -1,15 +1,18 @@
 <html>
   <head>
     <title>Simple Flask NewsApi.org App</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Milligram Manenos -->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
-    <link rel="stylesheet" href="../static/css/override.css">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Check sources every hour -->
+      <meta http-equiv="refresh" content="3600">
+      
+      <!-- Milligram Manenos -->
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+      <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+      <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+      <link rel="stylesheet" href="../static/css/override.css">
 
   </head>
 
@@ -23,7 +26,7 @@
     
     <div id="main">
       <div id="form">
-        <select>
+        <select name="sources">
           <option>al-jazeera-english</option> 
           <option>ars-technica</option>
           <option>business-insider</option>
@@ -39,7 +42,7 @@
           <option>techcrunch</option>
           <option>techradar</option>
           <option>the-economist</option>
-          <option>the-guardian-uk</option></option>
+          <option>the-guardian-uk</option>
           <option>the-next-web</option>
           <option>the-new-york-times</option>
           <option>the-verge</option>
