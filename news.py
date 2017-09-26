@@ -11,26 +11,35 @@ app=Flask(__name__)
 api_key='b24ad8f28e1b4e089ee9bca096f11012'
 
 sources_list=[
-    'al-jazeera-english', 
-    'ars-technica', 
-    'business-insider', 
-    'buzzfeed', 
-    'engadget', 
-    'financial-times', 
-    'hacker-news', 
-    'mashable', 
-    'national-geographic', 
-    'polygon', 
-    'recode', 
-    'reuters', 
-    'techcrunch', 
-    'techradar', 
-    'the-economist', 
-    'the-guardian-uk', 
-    'the-next-web', 
-    'the-new-york-times', 
-    'the-verge'
-    ]
+'al-jazeera-english', 
+'ars-technica', 
+'business-insider', 
+'buzzfeed', 
+'engadget', 
+'financial-times', 
+'hacker-news', 
+'mashable', 
+'national-geographic', 
+'polygon', 
+'recode', 
+'reuters', 
+'techcrunch', 
+'techradar', 
+'the-economist', 
+'the-guardian-uk', 
+'the-next-web', 
+'the-new-york-times', 
+'the-verge',
+'the-huffington-post',
+'time',
+'the-wall-street-journal',
+'the-times-of-india',
+'reddit-r-all',
+'newsweek',
+'new-scientist',
+'fortune',
+'cnn',
+]
 
 for i in range(len(sources_list)):
     random_sources_list=random.shuffle(sources_list)
@@ -48,7 +57,7 @@ def articles():
         return render_template('articles.html', source=source, articles=articles)
 
     except KeyError:
-        return render_template('error.html')
+        return render_template('status.html')
 
 if __name__=='__main__':
     app.run(port=7100, debug=True)
