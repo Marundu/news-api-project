@@ -1,0 +1,59 @@
+<html>
+<head>
+  <title>Simple Flask NewsApi.org App</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Check sources every hour -->
+  <meta http-equiv="refresh" content="3600">
+
+  <!-- Milligram Manenos -->
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <link rel="stylesheet" href="../static/css/override.css">
+
+</head>
+
+<body>
+  <div id="header">
+    <div id="inner-header">
+      <h2>Simple Flask NewsApi.org App</h2>
+    </div>
+    <hr />
+  </div>
+
+  <div id="main">
+    <!-- <form action="." method="POST">
+
+    <h4><i> Source: {{ source }} </i><br/></h4>
+
+    {% for article in articles %}
+    
+    <u><p>{{ article['title'] }}</p></u>
+
+    <p><i> Description: </i> {{ article['description'] }}</p>
+
+    <p>URL: <a href="{{ article['url'] }}" target="_blank">{{ article['url'] }}</a></p>
+
+    <p>{{ article['publishedAt'] }}</p>
+
+    {% endfor %} -->
+
+    {{ results }}
+    {{ parsed }}
+
+    <!-- {{ source }}
+    {{ title }}
+    {{ description }}
+    {{ url }}
+    {{ published_at }} -->
+
+
+  </div>
+
+  <footer>Made with love in Flask and <a href="https://newsapi.org/">NewsAPI API</a></footer>
+
+</body>
+</html>
